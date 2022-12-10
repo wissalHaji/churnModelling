@@ -58,6 +58,10 @@ def create_pie_chart_filters():
 
 # ---------- Main app ------------------
 app = Dash(external_stylesheets=[dbc.themes.DARKLY])
+
+server = app.server
+
+
 cardFactory = CardFactory(dbc, html)
 app.layout = html.Div(
     children=[
