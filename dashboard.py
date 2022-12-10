@@ -21,7 +21,7 @@ total_exited = data["Exited"].sum()
 df_gender_exited = data.groupby(
     'Gender')['Exited'].value_counts(normalize=True).rename('count').to_frame().reset_index()
 bar_chart_gender = px.bar(df_gender_exited, x='Gender',
-                          y='count', color='Exited', width=922)
+                          y='count', color='Exited', width=800)
 bar_chart_gender.update_layout(
     title_text="Exited members per gender", title_x=0.5)
 
@@ -29,7 +29,7 @@ bar_chart_gender.update_layout(
 df_activity_exited = data.groupby(
     'IsActiveMember')['Exited'].value_counts(normalize=True).rename('count').to_frame().reset_index()
 bar_chart_activity = px.bar(df_activity_exited, x='IsActiveMember',
-                            y='count', color='Exited', width=922)
+                            y='count', color='Exited', width=800)
 bar_chart_activity.update_layout(
     title_text="Exited members per activity", title_x=0.5)
 
