@@ -82,9 +82,9 @@ app.layout = html.Div(
         # graph for actif members per gender
         # TODO need to have same proportions of gender
         html.Div(dcc.Graph(figure=bar_chart_gender),
-                 style={"display": "inline-block"}),
+                 style={}),
         html.Div(dcc.Graph(figure=bar_chart_activity),
-                 style={"display": "inline-block"})
+                 style={})
 
     ]
 )
